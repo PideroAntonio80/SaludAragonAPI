@@ -1,7 +1,9 @@
 package com.sanvalero.saludaragon.service;
 
 import com.sanvalero.saludaragon.domain.Employee;
+import com.sanvalero.saludaragon.domain.dto.EmployeeDTO;
 
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -12,12 +14,13 @@ import java.util.Set;
 public interface EmployeeService {
 
     Set<Employee> findAll();
-    Employee findById(int id);
-    //Set<Employee> findByNameAndSurename(String name, String surename);
+    Optional<Employee> findById(long id);
 
-    Employee addEmployee(Employee employee);
+    Employee addEmployeeToHospital(long idHospital, long idJob, EmployeeDTO employeeDTO);
 
-    Employee modifyEmployee(int id, Employee newEmployee);
+    Employee modifyEmployee(long id, EmployeeDTO employeeDTO);
 
-    void deleteEmployee(int id);
+    Employee modifyEmployeeBySalary(long id, float salary);
+
+    void deleteEmployee(long id);
 }

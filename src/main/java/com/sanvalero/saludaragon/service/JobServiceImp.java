@@ -1,10 +1,13 @@
 package com.sanvalero.saludaragon.service;
 
 import com.sanvalero.saludaragon.domain.Job;
+import com.sanvalero.saludaragon.domain.dto.JobDTO;
+import com.sanvalero.saludaragon.exception.JobNotFoundException;
 import com.sanvalero.saludaragon.repository.JobRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -24,18 +27,19 @@ public class JobServiceImp implements JobService{
     }
 
     @Override
-    public Job findByCode(String code) {
-        return jobRepository.findByCode(code);
+    public Optional<Job> findById(long id) {
+        return jobRepository.findById(id);
     }
 
-//    @Override
-//    public Set<Job> findByName(String name) {
-//        return jobRepository.findByName(name);
-//    }
+    @Override
+    public Set<Job> findByName(String name) {
+        if(name.equals("")) return jobRepository.findAll();
+        else return jobRepository.findByName(name);
+    }
 
     @Override
-    public Set<Job> findByNameAndSpecialty(String name, String specialty) {
-        return jobRepository.findByNameAndSpecialty(name, specialty);
+    public Job findByNameAndSpecialtyAndSurgical(String name, String specialty, boolean surgical) {
+        return jobRepository.findByNameAndSpecialtyAndSurgical(name, specialty, surgical);
     }
 
     @Override
@@ -44,15 +48,34 @@ public class JobServiceImp implements JobService{
     }
 
     @Override
-    public Job modifyJob(String code, Job newJob) {
-        Job job = jobRepository.findByCode(code);
-        newJob.setCode(job.getCode());
-        return jobRepository.save(newJob);
+    public Job modifyJob(long id, JobDTO jobDTO) {
+        Job job = jobRepository.findById(id)
+                .orElseThrow(() -> new JobNotFoundException(id));
+        setJob(job, jobDTO);
+        return jobRepository.save(job);
     }
 
     @Override
-    public void deleteJob(String code) {
-        Job job = jobRepository.findByCode(code);
+    public Job modifyJobBySalary(long id, float averageBaseSalary) {
+        Job job = jobRepository.findById(id)
+                .orElseThrow(() -> new JobNotFoundException(id));
+        job.setAverageBaseSalary(averageBaseSalary);
+        return jobRepository.save(job);
+    }
+
+    @Override
+    public void deleteJob(long id) {
+        Job job = jobRepository.findById(id)
+                .orElseThrow(() -> new JobNotFoundException(id));
         jobRepository.delete(job);
+    }
+
+    public void setJob(Job job, JobDTO jobDTO) {
+        job.setName(jobDTO.getName());
+        job.setSpecialty(jobDTO.getSpecialty());
+        job.setSurgical(jobDTO.isSurgical());
+        job.setMirNumber(jobDTO.getMirNumber());
+        job.setAverageBaseSalary(jobDTO.getAverageBaseSalary());
+        job.setCreation(jobDTO.getCreation());
     }
 }

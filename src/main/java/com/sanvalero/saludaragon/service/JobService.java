@@ -1,7 +1,9 @@
 package com.sanvalero.saludaragon.service;
 
 import com.sanvalero.saludaragon.domain.Job;
+import com.sanvalero.saludaragon.domain.dto.JobDTO;
 
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -11,13 +13,15 @@ import java.util.Set;
 
 public interface JobService {
     Set<Job> findAll();
-    Job findByCode(String code);
-//    Set<Job> findByName(String name);
-    Set<Job> findByNameAndSpecialty(String name, String specialty);
+    Optional<Job> findById(long id);
+    Set<Job> findByName(String name);
+    Job findByNameAndSpecialtyAndSurgical(String name, String specialty, boolean surgical);
 
     Job addJob(Job job);
 
-    Job modifyJob(String code, Job newJob);
+    Job modifyJob(long id, JobDTO jobDTO);
 
-    void deleteJob(String Code);
+    Job modifyJobBySalary(long id, float averageBaseSalary);
+
+    void deleteJob(long id);
 }

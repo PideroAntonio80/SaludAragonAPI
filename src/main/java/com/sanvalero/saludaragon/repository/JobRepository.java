@@ -14,7 +14,6 @@ import java.util.Set;
 @Repository
 public interface JobRepository extends CrudRepository<Job, Long> {
     Set<Job> findAll();
-    Job findByCode(String code);
-//    Set<Job> findByName(String name);
-    Set<Job> findByNameAndSpecialty(String name, String specialty);
+    Set<Job> findByName(String name);
+    Job findByNameAndSpecialtyAndSurgical(String name, String specialty, boolean surgical);
 }

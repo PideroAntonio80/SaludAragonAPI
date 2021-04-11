@@ -13,5 +13,4 @@ import java.util.Set;
 @Repository
 public interface HospitalRepository extends CrudRepository<Hospital, Long> {
     Set<Hospital> findAll();
-    Hospital findById(int id);
 }

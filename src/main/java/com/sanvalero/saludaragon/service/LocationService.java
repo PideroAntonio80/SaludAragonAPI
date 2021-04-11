@@ -1,7 +1,10 @@
 package com.sanvalero.saludaragon.service;
 
+import com.sanvalero.saludaragon.domain.Hospital;
 import com.sanvalero.saludaragon.domain.Location;
+import com.sanvalero.saludaragon.domain.dto.LocationDTO;
 
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -12,9 +15,11 @@ import java.util.Set;
 public interface LocationService {
 
     Set<Location> findAll();
-    Location findById(int id);
+    Optional<Location> findById(long id);
+    Set<Hospital> findByBedsRangeAndHavingSpecialties(long id, int minBeds, int maxBeds, boolean specialties);
 
     Location addLocation(Location location);
-    Location modifyLocation(int id, Location location);
-    void deleteLocation(int id);
+    Location modifyLocation(long id, LocationDTO locationDTO);
+    Location modifyLocationByHasHospital(long id, boolean hasHospital);
+    void deleteLocation(long id);
 }

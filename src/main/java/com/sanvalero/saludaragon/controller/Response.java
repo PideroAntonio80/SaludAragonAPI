@@ -1,5 +1,6 @@
 package com.sanvalero.saludaragon.controller;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,7 +24,10 @@ public class Response {
     @Data
     @AllArgsConstructor(access = AccessLevel.PRIVATE)
     static class Error {
+        @Schema(description = "Number code Error", example = "404")
         private long errorCode;
+
+        @Schema(description = "Error Message", example = "Job not found")
         private String message;
     }
 
@@ -31,7 +35,7 @@ public class Response {
         return new Response(new Error(NO_ERROR, NO_MESSAGE));
     }
 
-    public static Response errorResonse(int errorCode, String errorMessage) {
+    public static Response errorResponse(int errorCode, String errorMessage) {
         return new Response(new Error(errorCode, errorMessage));
     }
 }

@@ -14,5 +14,4 @@ import java.util.Set;
 @Repository
 public interface LocationRepository extends CrudRepository<Location, Long> {
     Set<Location> findAll();
-    Location findById(int id);
 }

@@ -21,11 +21,11 @@ public class SaludAragonConfig {
         return new OpenAPI()
                 .components(new Components())
                 .info(new Info().title("SaludAragon API")
-                        .description("API REST de prueba sobre los datos del Salud de Aragón")
+                        .description("API REST sobre los datos del Salud de Aragón")
                         .contact(new Contact()
                                 .name("Pedro Oros")
                                 .email("shadycreek@hotmail.com")
-                                .url("No existe de momento"))
+                                .url("https://github.com/PideroAntonio80/SaludAragonAPI.git"))
                         .version("1.0"));
     }
 }

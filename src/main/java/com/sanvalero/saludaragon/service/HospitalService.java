@@ -1,7 +1,12 @@
 package com.sanvalero.saludaragon.service;
 
+import com.sanvalero.saludaragon.domain.Employee;
 import com.sanvalero.saludaragon.domain.Hospital;
+import com.sanvalero.saludaragon.domain.Job;
+import com.sanvalero.saludaragon.domain.dto.HospitalDTO;
 
+import java.time.LocalDate;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -12,9 +17,11 @@ import java.util.Set;
 public interface HospitalService {
 
     Set<Hospital> findAll();
-    Hospital findById(int id);
+    Optional<Hospital> findById(long id);
+    Set<Employee> findEmployeesBySalaryAndJob(long idHospital, float minSalary, float maxSalary, long idJob);
 
-    Hospital addHospital(Hospital hospital);
-    Hospital modifyHospital(int id, Hospital newHospital);
-    void deleteHospital(int id);
+    Hospital addHospitalToLocation(long id, HospitalDTO hospitalDTO);
+    Hospital modifyHospital(long id, HospitalDTO hospitalDTO);
+    Hospital modifyByBeds(long id, int beds);
+    void deleteHospital(long id);
 }
