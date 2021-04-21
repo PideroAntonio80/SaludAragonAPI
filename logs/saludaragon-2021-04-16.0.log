@@ -1,0 +1,14 @@
+2021-04-16 19:45:13,534 INFO org.springframework.boot.StartupInfoLogger [main] Starting SaludAragonApplication using Java 11.0.8 on DESKTOP-SPU9LGP with PID 9412 (C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon\target\classes started by shady in C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon)
+2021-04-16 19:45:13,537 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-04-16 19:45:14,093 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-16 19:45:14,144 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
+2021-04-16 19:45:14,615 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-04-16 19:45:14,625 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-16 19:45:14,625 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-04-16 19:45:14,626 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-16 19:45:14,718 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-04-16 19:45:14,719 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1145 ms
+2021-04-16 19:45:14,848 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-16 19:45:14,903 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-16 19:45:15,004 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-16 19:45:15,077 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...

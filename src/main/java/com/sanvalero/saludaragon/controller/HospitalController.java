@@ -78,7 +78,7 @@ public class HospitalController {
     }
 
     /*--------------------------------FIND_EMPLOYEES_BY_DATE_AND_JOB----------------------------------*/
-    @Operation(summary = "Obtiene los empleados de una hospital contratados en un rango  de fechas y filtrados por puesto de trabajo")
+    @Operation(summary = "Obtiene los empleados de una hospital que ganan un salario dentro de un determinado rango y filtrados por puesto de trabajo")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado de empleados",
                     content = @Content(array = @ArraySchema(schema = @Schema(implementation = Employee.class)))),

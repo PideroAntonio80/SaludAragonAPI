@@ -15,6 +15,6 @@ public class HospitalNotFoundException extends RuntimeException {
     }
 
     public HospitalNotFoundException(long id){
-        super("Job not found: " + id);
+        super("Hospital not found: " + id);
     }
 }

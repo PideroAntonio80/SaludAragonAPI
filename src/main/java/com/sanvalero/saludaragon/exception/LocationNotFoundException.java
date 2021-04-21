@@ -15,6 +15,6 @@ public class LocationNotFoundException extends RuntimeException {
     }
 
     public LocationNotFoundException(long id){
-        super("Job not found: " + id);
+        super("Location not found: " + id);
     }
 }

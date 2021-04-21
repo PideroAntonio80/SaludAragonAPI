@@ -2,10 +2,8 @@ package com.sanvalero.saludaragon.service;
 
 import com.sanvalero.saludaragon.domain.Employee;
 import com.sanvalero.saludaragon.domain.Hospital;
-import com.sanvalero.saludaragon.domain.Job;
 import com.sanvalero.saludaragon.domain.dto.HospitalDTO;
 
-import java.time.LocalDate;
 import java.util.Optional;
 import java.util.Set;
 

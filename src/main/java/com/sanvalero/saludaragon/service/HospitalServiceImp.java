@@ -14,7 +14,6 @@ import com.sanvalero.saludaragon.repository.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -77,6 +76,11 @@ public class HospitalServiceImp implements HospitalService {
 
         hospitalRepository.save(newHospital);
 
+        if (!location.isHasHospital()) {
+            location.setHasHospital(true);
+            locationRepository.save(location);
+        }
+
         return newHospital;
     }
 
@@ -101,6 +105,13 @@ public class HospitalServiceImp implements HospitalService {
         Hospital hospital = hospitalRepository.findById(id)
                 .orElseThrow(() -> new HospitalNotFoundException(id));
         hospitalRepository.delete(hospital);
+
+        Location location = hospital.getLocation();
+
+        if(location.getHospitals().size() == 0) {
+            location.setHasHospital(false);
+            locationRepository.save(location);
+        }
     }
 
     public void setHospital(Hospital hospital, HospitalDTO hospitalDTO) {
