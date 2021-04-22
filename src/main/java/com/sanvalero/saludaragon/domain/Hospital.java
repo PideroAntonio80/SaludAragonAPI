@@ -60,6 +60,6 @@ public class Hospital {
     private Location location;
 
     @Schema(description = "Listado de empleados que tiene este hospital")
-    @OneToMany(mappedBy = "hospital")
+    @OneToMany(mappedBy = "hospital", cascade = CascadeType.REMOVE)
     private List<Employee> employees;
 }

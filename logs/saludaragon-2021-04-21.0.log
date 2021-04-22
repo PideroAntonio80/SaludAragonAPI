@@ -1,0 +1,322 @@
+2021-04-21 10:56:50,965 INFO org.springframework.boot.StartupInfoLogger [main] Starting SaludAragonApplication using Java 11.0.8 on DESKTOP-SPU9LGP with PID 8768 (C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon\target\classes started by shady in C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon)
+2021-04-21 10:56:50,969 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-04-21 10:56:51,619 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-21 10:56:51,690 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
+2021-04-21 10:56:52,239 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-04-21 10:56:52,248 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-21 10:56:52,249 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-04-21 10:56:52,250 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-21 10:56:52,351 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-04-21 10:56:52,351 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1338 ms
+2021-04-21 10:56:52,519 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-21 10:56:52,590 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-21 10:56:52,711 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-21 10:56:52,801 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-04-21 10:56:52,957 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-04-21 10:56:52,973 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-04-21 10:56:53,668 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-21 10:56:53,675 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-21 10:56:54,052 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-21 10:56:54,109 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-21 10:56:54,491 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-04-21 10:56:54,619 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-04-21 10:56:54,670 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-21 10:56:54,678 INFO org.springframework.boot.StartupInfoLogger [main] Started SaludAragonApplication in 4.14 seconds (JVM running for 4.527)
+2021-04-21 10:57:31,001 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-21 10:57:31,001 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-04-21 10:57:31,002 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2021-04-21 10:57:44,857 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-3] Inicio getEmployees
+2021-04-21 10:57:45,065 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-3] Fin getEmployees
+2021-04-21 11:02:16,549 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-6] Inicio getLocations
+2021-04-21 11:02:16,555 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-6] Fin getLocations
+2021-04-21 11:02:48,232 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-7] Inicio getLocationById
+2021-04-21 11:02:48,243 ERROR com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-7] Job not found: 8
+com.sanvalero.saludaragon.exception.LocationNotFoundException: Job not found: 8
+	at com.sanvalero.saludaragon.controller.LocationController.lambda$getLocationById$0(LocationController.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at com.sanvalero.saludaragon.controller.LocationController.getLocationById(LocationController.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-04-21 11:04:27,463 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-10] Inicio getLocationById
+2021-04-21 11:04:27,468 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-10] Fin getLocationById
+2021-04-21 11:10:37,753 INFO org.springframework.boot.StartupInfoLogger [main] Starting SaludAragonApplication using Java 11.0.8 on DESKTOP-SPU9LGP with PID 13272 (C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon\target\classes started by shady in C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon)
+2021-04-21 11:10:37,755 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-04-21 11:10:38,504 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-21 11:10:38,567 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2021-04-21 11:10:39,099 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-04-21 11:10:39,111 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-21 11:10:39,112 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-04-21 11:10:39,112 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-21 11:10:39,209 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-04-21 11:10:39,209 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1418 ms
+2021-04-21 11:10:39,369 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-21 11:10:39,434 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-21 11:10:39,525 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-21 11:10:39,600 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-04-21 11:10:39,731 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-04-21 11:10:39,745 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-04-21 11:10:40,398 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-21 11:10:40,408 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-21 11:10:40,866 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-21 11:10:40,932 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-21 11:10:41,335 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-04-21 11:10:41,493 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-04-21 11:10:41,541 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-21 11:10:41,551 INFO org.springframework.boot.StartupInfoLogger [main] Started SaludAragonApplication in 4.19 seconds (JVM running for 4.569)
+2021-04-21 11:11:10,885 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-21 11:11:10,886 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-04-21 11:11:10,887 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2021-04-21 11:11:10,913 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-2] Inicio getLocations
+2021-04-21 11:11:11,042 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-2] Fin getLocations
+2021-04-21 11:11:32,928 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-3] Inicio getLocationById
+2021-04-21 11:11:32,933 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-3] Fin getLocationById
+2021-04-21 11:14:11,121 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-6] Inicio findHospitalsByBedsRangeAndHavingSpecialties
+2021-04-21 11:14:11,131 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-6] Fin findHospitalsByBedsRangeAndHavingSpecialties
+2021-04-21 11:15:56,930 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-9] Inicio addLocation
+2021-04-21 11:15:56,961 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-9] Fin addLocation
+2021-04-21 11:16:40,332 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-10] Inicio modifyLocation
+2021-04-21 11:16:40,348 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-10] Fin modifyLocation
+2021-04-21 11:17:05,092 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PATCH' not supported]
+2021-04-21 11:18:25,333 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-4] Inicio modifyLocationByHavingHospital
+2021-04-21 11:18:25,342 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-4] Fin modifyLocationByHavingHospital
+2021-04-21 11:18:34,516 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-5] Inicio modifyLocationByHavingHospital
+2021-04-21 11:18:34,527 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-5] Fin modifyLocationByHavingHospital
+2021-04-21 11:18:48,912 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-6] Inicio deleteLocation
+2021-04-21 11:18:48,930 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-6] Fin deleteLocation
+2021-04-21 11:19:29,787 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-7] Inicio getJobs
+2021-04-21 11:19:29,796 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-7] Fin getJobs
+2021-04-21 11:19:42,801 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-8] Inicio getJobById
+2021-04-21 11:19:42,805 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-8] Fin getJobById
+2021-04-21 11:22:43,565 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-1] Inicio getJobsByName
+2021-04-21 11:22:43,581 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-1] Fin getJobsByName
+2021-04-21 11:22:55,527 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-2] Inicio getJobsByName
+2021-04-21 11:22:55,530 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-2] Fin getJobsByName
+2021-04-21 11:23:59,194 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-5] Inicio getJobsByName
+2021-04-21 11:23:59,196 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-5] Fin getJobsByName
+2021-04-21 11:24:09,017 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-6] Inicio getJobsByName
+2021-04-21 11:24:09,019 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-6] Fin getJobsByName
+2021-04-21 11:25:26,318 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-9] Inicio getJobByNameAndSpecialty
+2021-04-21 11:25:26,325 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-9] Fin getJobByNameAndSpecialty
+2021-04-21 11:29:26,598 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-2] Inicio addJob
+2021-04-21 11:29:26,606 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-2] Fin addJob
+2021-04-21 11:30:42,779 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-5] Inicio modifyJob
+2021-04-21 11:30:42,788 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-5] Fin modifyJob
+2021-04-21 11:31:54,829 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-8] Inicio modifyJobBySalary
+2021-04-21 11:31:54,836 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-8] Fin modifyJobBySalary
+2021-04-21 11:32:10,717 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-9] Inicio deleteJob
+2021-04-21 11:32:10,725 INFO com.sanvalero.saludaragon.controller.JobController [http-nio-8080-exec-9] Fin deleteJob
+2021-04-21 11:33:18,255 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-1] Inicio getHospitals
+2021-04-21 11:33:18,271 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-1] Fin getHospitals
+2021-04-21 11:34:33,452 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-4] Inicio getHospitalById
+2021-04-21 11:34:33,456 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-4] Fin getHospitalById
+2021-04-21 11:39:27,623 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-10] Inicio findEmployeesFromHospital
+2021-04-21 11:39:27,633 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-10] Fin findEmployeesFromHospital
+2021-04-21 11:39:36,075 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-1] Inicio findEmployeesFromHospital
+2021-04-21 11:39:36,079 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-1] Fin findEmployeesFromHospital
+2021-04-21 11:40:09,119 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-2] Inicio findEmployeesFromHospital
+2021-04-21 11:40:09,125 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-2] Fin findEmployeesFromHospital
+2021-04-21 11:42:34,167 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-5] Inicio addHospital
+2021-04-21 11:42:34,182 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-5] Fin addHospital
+2021-04-21 11:46:23,702 INFO org.springframework.boot.StartupInfoLogger [main] Starting SaludAragonApplication using Java 11.0.8 on DESKTOP-SPU9LGP with PID 13524 (C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon\target\classes started by shady in C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon)
+2021-04-21 11:46:23,705 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-04-21 11:46:24,245 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-21 11:46:24,294 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2021-04-21 11:46:24,742 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-04-21 11:46:24,751 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-21 11:46:24,752 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-04-21 11:46:24,752 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-21 11:46:24,847 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-04-21 11:46:24,848 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1112 ms
+2021-04-21 11:46:24,972 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-21 11:46:25,018 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-21 11:46:25,095 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-21 11:46:25,158 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-04-21 11:46:25,275 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-04-21 11:46:25,286 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-04-21 11:46:25,745 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-21 11:46:25,752 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-21 11:46:26,074 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-21 11:46:26,120 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-21 11:46:26,442 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-04-21 11:46:26,560 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-04-21 11:46:26,600 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-21 11:46:26,614 INFO org.springframework.boot.StartupInfoLogger [main] Started SaludAragonApplication in 3.251 seconds (JVM running for 3.593)
+2021-04-21 11:48:27,927 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-21 11:48:27,928 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-04-21 11:48:27,929 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2021-04-21 11:48:28,027 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-2] Inicio modifyHospital
+2021-04-21 11:48:28,110 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-2] Fin modifyHospital
+2021-04-21 11:50:07,921 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-5] Inicio modifyHospitalByBeds
+2021-04-21 11:50:07,929 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-5] Fin modifyHospitalByBeds
+2021-04-21 11:50:23,207 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-6] Inicio deleteHospital
+2021-04-21 11:50:23,222 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-6] Fin deleteHospital
+2021-04-21 11:51:09,687 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-7] Inicio addHospital
+2021-04-21 11:51:09,703 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-7] Fin addHospital
+2021-04-21 11:54:43,426 INFO org.springframework.boot.StartupInfoLogger [main] Starting SaludAragonApplication using Java 11.0.8 on DESKTOP-SPU9LGP with PID 10948 (C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon\target\classes started by shady in C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon)
+2021-04-21 11:54:43,429 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-04-21 11:54:44,040 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-21 11:54:44,096 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2021-04-21 11:54:44,606 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-04-21 11:54:44,614 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-21 11:54:44,615 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-04-21 11:54:44,615 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-21 11:54:44,708 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-04-21 11:54:44,708 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1243 ms
+2021-04-21 11:54:44,848 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-21 11:54:44,895 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-21 11:54:44,975 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-21 11:54:45,045 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-04-21 11:54:45,170 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-04-21 11:54:45,183 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-04-21 11:54:45,647 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-21 11:54:45,656 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-21 11:54:45,986 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-21 11:54:46,033 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-21 11:54:46,365 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-04-21 11:54:46,485 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-04-21 11:54:46,531 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-21 11:54:46,542 INFO org.springframework.boot.StartupInfoLogger [main] Started SaludAragonApplication in 3.478 seconds (JVM running for 3.832)
+2021-04-21 11:55:44,150 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-21 11:55:44,151 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-04-21 11:55:44,152 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2021-04-21 11:55:44,182 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-2] Inicio deleteHospital
+2021-04-21 11:55:44,277 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-2] Fin deleteHospital
+2021-04-21 11:56:05,626 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-3] Inicio addHospital
+2021-04-21 11:56:05,656 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-3] Fin addHospital
+2021-04-21 11:57:07,347 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8080-exec-3] Init duration for springdoc-openapi is: 709 ms
+2021-04-21 11:59:16,935 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-7] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-04-21 12:00:04,411 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-8] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "2020-04-21": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2020-04-21' could not be parsed at index 2; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String "2020-04-21": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2020-04-21' could not be parsed at index 2
+ at [Source: (PushbackInputStream); line: 4, column: 16] (through reference chain: com.sanvalero.saludaragon.domain.dto.EmployeeDTO["dateHired"])]
+2021-04-21 12:02:04,292 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-10] Inicio addEmployeeToHospital
+2021-04-21 12:02:04,307 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-10] Fin addEmployeeToHospital
+2021-04-21 12:02:42,661 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-2] Inicio addLocation
+2021-04-21 12:02:42,665 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-2] Fin addLocation
+2021-04-21 12:03:16,097 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-1] Inicio deleteLocation
+2021-04-21 12:03:16,103 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-1] Fin deleteLocation
+2021-04-21 12:05:06,110 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-5] Inicio getLocations
+2021-04-21 12:05:06,190 INFO com.sanvalero.saludaragon.controller.LocationController [http-nio-8080-exec-5] Fin getLocations
+2021-04-21 12:06:23,856 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-8] Inicio getEmployees
+2021-04-21 12:06:23,876 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-8] Fin getEmployees
+2021-04-21 12:06:41,075 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-9] Inicio getEmployeeById
+2021-04-21 12:06:41,080 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-9] Fin getEmployeeById
+2021-04-21 12:07:56,618 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-1] Inicio modifyEmployee
+2021-04-21 12:07:56,626 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-1] Fin modifyEmployee
+2021-04-21 12:08:44,223 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-3] Inicio modifyEmployeeBySalary
+2021-04-21 12:08:44,230 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-3] Fin modifyEmployeeBySalary
+2021-04-21 12:08:56,508 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-4] Inicio deleteEmployee
+2021-04-21 12:08:56,515 INFO com.sanvalero.saludaragon.controller.EmployeeController [http-nio-8080-exec-4] Fin deleteEmployee
+2021-04-21 12:22:57,369 INFO org.springframework.boot.StartupInfoLogger [main] Starting SaludAragonApplication using Java 11.0.8 on DESKTOP-SPU9LGP with PID 17360 (C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon\target\classes started by shady in C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon)
+2021-04-21 12:22:57,372 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-04-21 12:22:57,939 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-21 12:22:57,996 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2021-04-21 12:22:58,491 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-04-21 12:22:58,500 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-21 12:22:58,501 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-04-21 12:22:58,501 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-21 12:22:58,597 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-04-21 12:22:58,597 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1193 ms
+2021-04-21 12:22:58,734 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-21 12:22:58,783 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-21 12:22:58,872 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-21 12:22:58,943 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-04-21 12:22:59,071 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-04-21 12:22:59,085 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-04-21 12:22:59,647 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-21 12:22:59,655 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-21 12:23:00,001 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-21 12:23:00,059 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-21 12:23:00,395 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-04-21 12:23:00,537 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-04-21 12:23:00,581 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-21 12:23:00,591 INFO org.springframework.boot.StartupInfoLogger [main] Started SaludAragonApplication in 3.583 seconds (JVM running for 3.911)
+2021-04-21 12:25:49,045 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-21 12:25:49,046 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-04-21 12:25:49,047 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2021-04-21 12:25:49,075 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-1] Inicio deleteHospital
+2021-04-21 12:25:49,176 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-1] Fin deleteHospital
+2021-04-21 23:13:28,844 INFO org.springframework.boot.StartupInfoLogger [main] Starting SaludAragonApplication using Java 11.0.8 on DESKTOP-SPU9LGP with PID 13608 (C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon\target\classes started by shady in C:\Users\shady\Documents\Proyectos_IntelliJ\SaludAragon)
+2021-04-21 23:13:28,847 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-04-21 23:13:29,744 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-21 23:13:29,850 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 92 ms. Found 4 JPA repository interfaces.
+2021-04-21 23:13:30,767 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-04-21 23:13:30,785 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-04-21 23:13:30,791 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-04-21 23:13:30,792 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-21 23:13:31,025 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-04-21 23:13:31,025 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2146 ms
+2021-04-21 23:13:31,340 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-21 23:13:31,415 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-21 23:13:31,542 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-21 23:13:31,638 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-04-21 23:13:31,798 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-04-21 23:13:31,816 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-04-21 23:13:32,433 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-21 23:13:32,444 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-21 23:13:32,893 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-21 23:13:32,955 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-21 23:13:33,368 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-04-21 23:13:33,507 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-04-21 23:13:33,550 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-21 23:13:33,560 INFO org.springframework.boot.StartupInfoLogger [main] Started SaludAragonApplication in 5.095 seconds (JVM running for 5.464)
+2021-04-21 23:14:50,445 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-21 23:14:50,445 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-04-21 23:14:50,446 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2021-04-21 23:14:50,473 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-1] Inicio findEmployeesFromHospital
+2021-04-21 23:14:50,571 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-1] Fin findEmployeesFromHospital
+2021-04-21 23:16:34,707 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-3] Inicio findEmployeesFromHospital
+2021-04-21 23:16:34,715 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-3] Fin findEmployeesFromHospital
+2021-04-21 23:16:45,912 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-7] Inicio findEmployeesFromHospital
+2021-04-21 23:16:45,918 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-7] Fin findEmployeesFromHospital
+2021-04-21 23:17:03,521 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-8] Inicio getHospitals
+2021-04-21 23:17:03,606 INFO com.sanvalero.saludaragon.controller.HospitalController [http-nio-8080-exec-8] Fin getHospitals

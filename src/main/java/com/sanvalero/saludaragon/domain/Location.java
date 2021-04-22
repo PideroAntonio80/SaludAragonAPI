@@ -51,6 +51,6 @@ public class Location {
     private LocalDate originDate;
 
     @Schema(description = "Listado de Hospitales que tiene esta localidad")
-    @OneToMany(mappedBy = "location")
+    @OneToMany(mappedBy = "location", cascade = CascadeType.REMOVE)
     private List<Hospital> hospitals;
 }

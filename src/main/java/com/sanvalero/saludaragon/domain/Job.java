@@ -59,7 +59,7 @@ public class Job {
     private LocalDate creation;
 
     @Schema(description = "Listado de empleados que desempeñan este puesto de trabajo")
-    @OneToMany(mappedBy = "job")
+    @OneToMany(mappedBy = "job", cascade = CascadeType.REMOVE)
     private List<Employee> employees;
 
     /*public void includeEmployee(Employee employee) {
